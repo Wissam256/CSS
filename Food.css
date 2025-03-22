@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    position: relative;
+    flex: 1; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+@media (min-width: 992px) {
+    .section {
+        width: calc(33.33% - 20px); 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 20px); 
+    }
+    .section:nth-child(3) {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        width: 100%; 
+    }
+}
+
+.section-fish {
+    background-color: #add8e6; /* Color for Fish */
+}
+
+.section-vegetarian {
+    background-color: #90ee90; /* Color for Vegetarian */
+}
+
+.section-desserts {
+    background-color: #ffcccb; /* Color for Desserts */
+}
